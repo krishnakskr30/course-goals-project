@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../UI/Button/Button";
-import "./CourseInput.css";
 
 const FormControl = styled.div`
   margin: 0.5rem 0;
@@ -59,7 +58,7 @@ const CourseInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl>
+      <FormControl className={!isValidInput && "invalid"}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
       </FormControl>
